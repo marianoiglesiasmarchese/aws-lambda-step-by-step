@@ -61,3 +61,32 @@ https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/s
 sam local start-api --env-vars local.env.json
 ```
 https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-cli-command-reference-sam-local-start-api.html
+
+# validate your template.yml - sam validate
+
+```bash
+sam validate template.yml
+```
+https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-cli-command-reference-sam-validate.html
+
+# pack your lambda - sam package
+
+```bash
+sam package --template-file template.yml --output-template-file package.yml
+```
+https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-cli-command-reference-sam-package.html
+
+# send your lambda onto AWS Serverless Application Repository - sam publish
+
+```bash
+# To publish an application
+sam publish --template packaged.yaml --region us-east-1
+```
+https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-cli-command-reference-sam-publish.html
+
+# deploy your lambda - sam deploy
+
+```bash
+sam deploy --guided
+```
+https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-cli-command-reference-sam-deploy.html
